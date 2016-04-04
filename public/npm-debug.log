@@ -1,0 +1,97 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'bower' ]
+2 info using npm@2.14.12
+3 info using node@v4.3.1
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'bower', null ]
+7 verbose cache add spec bower
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'bower',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'bower',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed bower@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for bower
+11 info addNameTag [ 'bower', 'latest' ]
+12 silly mapToRegistry name bower
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/bower
+16 verbose addNameTag registry:https://registry.npmjs.org/bower not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/bower
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 19:03:44
+20 verbose request id ec8e807f336859fd
+21 verbose etag "3D3GU6WBFPDPVXMU5P70NTNRS"
+22 http request GET https://registry.npmjs.org/bower
+23 http 304 https://registry.npmjs.org/bower
+24 verbose headers { date: 'Tue, 15 Mar 2016 11:03:46 GMT',
+24 verbose headers   via: '1.1 varnish',
+24 verbose headers   'cache-control': 'max-age=300',
+24 verbose headers   etag: '"3D3GU6WBFPDPVXMU5P70NTNRS"',
+24 verbose headers   age: '158',
+24 verbose headers   connection: 'keep-alive',
+24 verbose headers   'x-served-by': 'cache-lax1430-LAX',
+24 verbose headers   'x-cache': 'HIT',
+24 verbose headers   'x-cache-hits': '5',
+24 verbose headers   'x-timer': 'S1458039826.492200,VS0,VE0',
+24 verbose headers   vary: 'Accept' }
+25 silly get cb [ 304,
+25 silly get   { date: 'Tue, 15 Mar 2016 11:03:46 GMT',
+25 silly get     via: '1.1 varnish',
+25 silly get     'cache-control': 'max-age=300',
+25 silly get     etag: '"3D3GU6WBFPDPVXMU5P70NTNRS"',
+25 silly get     age: '158',
+25 silly get     connection: 'keep-alive',
+25 silly get     'x-served-by': 'cache-lax1430-LAX',
+25 silly get     'x-cache': 'HIT',
+25 silly get     'x-cache-hits': '5',
+25 silly get     'x-timer': 'S1458039826.492200,VS0,VE0',
+25 silly get     vary: 'Accept' } ]
+26 verbose etag https://registry.npmjs.org/bower from cache
+27 verbose get saving bower to /Users/wenzt/.npm/registry.npmjs.org/bower/.cache.json
+28 silly addNameTag next cb for bower with tag latest
+29 silly addNamed bower@1.7.7
+30 verbose addNamed "1.7.7" is a plain semver version for bower
+31 silly mapToRegistry name bower
+32 silly mapToRegistry using default registry
+33 silly mapToRegistry registry https://registry.npmjs.org/
+34 silly mapToRegistry uri https://registry.npmjs.org/bower
+35 verbose addRemoteTarball https://registry.npmjs.org/bower/-/bower-1.7.7.tgz not in flight; adding
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/bower/-/bower-1.7.7.tgz',
+36 verbose addRemoteTarball   '2fd7ff3ebdcba5a8ffcd84c397c8fdfe9f825f92' ]
+37 info retry fetch attempt 1 at 19:03:48
+38 info attempt registry request try #1 at 19:03:48
+39 http fetch GET https://registry.npmjs.org/bower/-/bower-1.7.7.tgz
+40 http fetch 200 https://registry.npmjs.org/bower/-/bower-1.7.7.tgz
+41 silly fetchAndShaCheck shasum 2fd7ff3ebdcba5a8ffcd84c397c8fdfe9f825f92
+42 verbose stack Error: shasum check failed for /var/folders/x6/78br9ld90rv9m60bvywp5sfw0000gn/T/npm-19906-78cbe880/registry.npmjs.org/bower/-/bower-1.7.7.tgz
+42 verbose stack Expected: 2fd7ff3ebdcba5a8ffcd84c397c8fdfe9f825f92
+42 verbose stack Actual:   a5aab92bf8376f4f26619e3c2650aa5a93ef7923
+42 verbose stack From:     https://registry.npmjs.org/bower/-/bower-1.7.7.tgz
+42 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/sha/index.js:25:8
+42 verbose stack     at ReadStream.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/sha/index.js:72:7)
+42 verbose stack     at emitNone (events.js:72:20)
+42 verbose stack     at ReadStream.emit (events.js:166:7)
+42 verbose stack     at endReadableNT (_stream_readable.js:905:12)
+42 verbose stack     at nextTickCallbackWith2Args (node.js:437:9)
+42 verbose stack     at process._tickCallback (node.js:351:17)
+43 verbose cwd /Users/wenzt/Desktop/MyNote/public
+44 error Darwin 15.3.0
+45 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "bower"
+46 error node v4.3.1
+47 error npm  v2.14.12
+48 error shasum check failed for /var/folders/x6/78br9ld90rv9m60bvywp5sfw0000gn/T/npm-19906-78cbe880/registry.npmjs.org/bower/-/bower-1.7.7.tgz
+48 error Expected: 2fd7ff3ebdcba5a8ffcd84c397c8fdfe9f825f92
+48 error Actual:   a5aab92bf8376f4f26619e3c2650aa5a93ef7923
+48 error From:     https://registry.npmjs.org/bower/-/bower-1.7.7.tgz
+49 error If you need help, you may report this error at:
+49 error     <https://github.com/npm/npm/issues>
+50 verbose exit [ 1, true ]
