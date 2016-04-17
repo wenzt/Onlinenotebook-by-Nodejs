@@ -16,13 +16,14 @@ mongoose.connection.on('error', console.error.bind(console, '连接失败'));
 var app = express();
 
 app.set('views', path.join('/Users/wenzt/Desktop/MyNote', 'views'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');//f name is one of the application settings,
+                              // it affects the behavior of the application.
 
 app.use(express.static(path.join('/Users/wenzt/Desktop/MyNote', 'public')));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-
+//Mounts the middleware function(s) at the path. If path is not specified, it defaults to “/”.
 
 app.use(session({
     secret: '1234',
@@ -57,14 +58,13 @@ app.get('/', function (req, res) {    //解决未登录情况下进入主页的�
             }
             res.render('index', {
                 user: req.session.user,
-                title: '首页',
+                //title: '首页',
                 notes: allNotes
             });
         })
     }
     else {
-
-        res.render('index', {
+        res.render('index', {     // pass a local variable to the view
             user: req.session.user,
             title: '首页',
             //notes:allNotes
@@ -233,7 +233,7 @@ app.post('/login', function (req, res) {
 app.get('/quit', function (req, res) {
     req.session.user = null;
     console.log('退出!');
-    return res.redirect('/login');
+    return res.redirect('/');
 });
 
 
